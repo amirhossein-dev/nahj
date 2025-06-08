@@ -1,4 +1,3 @@
-<!-- src/layouts/MainLayout.vue -->
 <template>
   <q-layout view="lHh Lpr lFf">
     <HeaderBar />

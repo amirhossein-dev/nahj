@@ -12,6 +12,6 @@
 </template>
 
 <script setup>
-import HeaderBar from '@/components/HeaderBar.vue'
-import BottomNav from '@/components/BottomNav.vue'
+import HeaderBar from '@/components/HeaderBar/HeaderBar.vue'
+import BottomNav from '@/components/BottomNav/BottomNav.vue'
 </script>

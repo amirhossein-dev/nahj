@@ -1,9 +1,12 @@
 {
-  "nav": {
-    "home": "Home",
-    "letters": "Letters",
-    "wisdom": "Wisdom",
-    "sermons": "Sermons",
-    "settings": "Settings"
-  }
+  "appTitle": "Demo Application",
+  "login": "Login",
+  "logout": "Logout",
+  "darkMode": "Dark Mode",
+  "lightMode": "Light Mode",
+  "welcomeMessage": "Welcome!",
+  "currentLanguage": "Current Language",
+  "currentTheme": "Current Theme",
+  "loggedInAs": "Logged in as",
+  "notLoggedIn": "You are not logged in"
 }

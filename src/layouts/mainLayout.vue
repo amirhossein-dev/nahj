@@ -1,16 +1,24 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <div class="dark">
     <HeaderBar />
-
-    <q-page-container>
-      <router-view />
-    </q-page-container>
-
-    <BottomNav />
-  </q-layout>
+    <router-view />
+  </div>
 </template>
 
-<script setup>
-import HeaderBar from '@/components/HeaderBar/HeaderBar.vue'
-import BottomNav from '@/components/BottomNav/BottomNav.vue'
+<script setup lang="ts">
+import HeaderBar from '@/components/HeaderBar.vue'
+import { useSettingsStore } from '@/store'
+import { watch } from 'vue'
+
+const settings = useSettingsStore()
+
+// Watch theme and apply 'dark' class to <html> dynamically
+watch(() => settings.theme, (newTheme) => {
+  if (newTheme === 'dark') {
+    document.documentElement.classList.add('dark')
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
+}, { immediate: true })
+
 </script>

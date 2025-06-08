@@ -1,9 +1,12 @@
 {
-  "nav": {
-    "home": "خانه",
-    "letters": "نامه‌ها",
-    "wisdom": "حکمت‌ها",
-    "sermons": "خطبه‌ها",
-    "settings": "تنظیمات"
-  }
+  "appTitle": "اپلیکیشن دمو",
+  "login": "ورود",
+  "logout": "خروج",
+  "darkMode": "حالت تاریک",
+  "lightMode": "حالت روشن",
+  "welcomeMessage": "خوش آمدید!",
+  "currentLanguage": "زبان فعلی",
+  "currentTheme": "تم فعلی",
+  "loggedInAs": "وارد شده به عنوان",
+  "notLoggedIn": "شما وارد نشده‌اید"
 }

@@ -8,5 +8,6 @@
   "currentLanguage": "Current Language",
   "currentTheme": "Current Theme",
   "loggedInAs": "Logged in as",
-  "notLoggedIn": "You are not logged in"
+  "notLoggedIn": "You are not logged in",
+  "nav": { "wisdom": "wisdoms", "home": "home", "letters": "letters", "sermons": "sermons", "settings": "settings" }
 }

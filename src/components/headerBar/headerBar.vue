@@ -27,7 +27,7 @@
 </template>
 
 <script setup lang="ts">
-import { useSettingsStore, useAuthStore } from '@/stores/appConfig.ts'
+import { useSettingsStore, useAuthStore } from '@/stores/appConfig'
 import { watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 

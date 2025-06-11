@@ -1,4 +1,3 @@
-<!-- src/components/headerNav/BottomNav.vue -->
 <template>
   <q-bottom-navigation v-model="currentTab" class="text-white bg-primary" glossy align="justify">
     <q-btn v-for="item in navItems" :key="item.name" flat dense @click="navigate(item.route)">

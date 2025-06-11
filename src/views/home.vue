@@ -12,7 +12,7 @@
 
 <script setup lang="ts">
 import mainLayout from '@/layouts/mainLayout.vue'
-import { useSettingsStore, useAuthStore } from '@/stores/appConfig.ts'
+import { useSettingsStore, useAuthStore } from '@/stores/appConfig'
 
 const settings = useSettingsStore()
 const auth = useAuthStore()

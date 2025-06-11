@@ -4,8 +4,8 @@ import { defineStore } from 'pinia'
 // Settings Store
 export const useSettingsStore = defineStore('settings', {
   state: () => ({
-    language: 'fa',   // default language
-    theme: 'light',  // light | dark
+    language: 'fa', // default language
+    theme: 'light' // light | dark
   }),
   actions: {
     setLanguage(lang: string) {
@@ -21,7 +21,7 @@ export const useSettingsStore = defineStore('settings', {
 export const useAuthStore = defineStore('auth', {
   state: () => ({
     isAuthenticated: false,
-    userName: '',
+    userName: ''
   }),
   actions: {
     login(name: string) {

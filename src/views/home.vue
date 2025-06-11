@@ -6,10 +6,13 @@
     <p v-if="auth.isAuthenticated">{{ $t('loggedInAs') }}: {{ auth.userName }}</p>
     <p v-else>{{ $t('notLoggedIn') }}</p>
   </main>
+  <h5>hello world !!</h5>
+  <main-layout />
 </template>
 
 <script setup lang="ts">
-import { useSettingsStore, useAuthStore } from '@/store'
+import mainLayout from '@/layouts/mainLayout.vue'
+import { useSettingsStore, useAuthStore } from '@/stores/appConfig.ts'
 
 const settings = useSettingsStore()
 const auth = useAuthStore()

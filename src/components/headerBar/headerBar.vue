@@ -27,7 +27,7 @@
 </template>
 
 <script setup lang="ts">
-import { useSettingsStore, useAuthStore } from '@/store'
+import { useSettingsStore, useAuthStore } from '@/stores/appConfig.ts'
 import { watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
@@ -36,9 +36,12 @@ const auth = useAuthStore()
 const { locale } = useI18n()
 
 // هماهنگی تغییر زبان در store و i18n
-watch(() => settings.language, (newLang) => {
-  locale.value = newLang
-})
+watch(
+  () => settings.language,
+  (newLang) => {
+    locale.value = newLang
+  }
+)
 
 // نمونه لاگین دمو
 function loginDemo() {

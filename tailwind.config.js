@@ -1,33 +1,17 @@
-// import type { Config } from 'tailwindcss'
-
-// const config: Config = {
-//   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-//   darkMode: 'class',
-//   theme: {
-//     extend: {
-//       colors: {
-//         primary: '#1d4ed8', // آبی تیره
-//         accent: '#10b981', // سبز یشمی
-//         background: {
-//           light: '#f9fafb',
-//           dark: '#1f2937'
-//         },
-//         text: {
-//           light: '#ffffff',
-//           dark: '#111827'
-//         }
-//       }
-//     }
-//   },
-//   plugins: []
-// }
-
-// export default config
+const colors = require('tailwindcss/colors')
 
 module.exports = {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  darkMode: 'class', // یا 'media' اگر ترجیح می‌دی بر اساس سیستم
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        bg: 'var(--color-bg)',
+        text: 'var(--color-text)',
+        primary: 'var(--color-primary)',
+        danger: 'var(--color-danger)'
+      }
+    }
   },
   plugins: []
 }

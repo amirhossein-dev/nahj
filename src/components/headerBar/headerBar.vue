@@ -1,7 +1,7 @@
 <template>
   <header class="flex items-center justify-between p-4 bg-gray-100 dark:bg-gray-800">
     <div>
-      <h1 class="text-lg font-bold">
+      <h1 class="text-lg font-bold text-[--color-text-light] dark:text-[--color-primary]">
         {{ $t('appTitle') }}
       </h1>
     </div>
@@ -14,9 +14,9 @@
         <button @click="loginDemo" class="text-blue-600 hover:underline">{{ $t('login') }}</button>
       </div> -->
 
-      <select v-model="settings.language" @change="changeLanguage" class="border rounded px-2 py-1">
-        <option value="fa" class="">{{ $t('language') }}</option>
-        <option value="en" class="">{{ $t('notSelctedLanguage') }}</option>
+      <select v-model="settings.language" @change="changeLanguage" class="text-[--color-text-light] dark:[color-text] border rounded px-2 py-1">
+        <option value="fa" class="text-[--color-text-light] dark:[color-]">{{ $t('language') }}</option>
+        <option value="en" class="text-[--color-text-light] dark:[color-]">{{ $t('notSelctedLanguage') }}</option>
       </select>
 
       <ThemeToggler />

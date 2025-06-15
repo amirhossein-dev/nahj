@@ -4,10 +4,12 @@
       <HeaderBar />
     </q-header>
     <q-page-container class="theme-surface p-4 min-h-screen">
-      <h1 class="text-primary text-2xl underline">سلام دنیا</h1>
-      <button class="btn btn-secondary">شروع</button>
-      <button class="btn btn-primary">شروع</button>
-      <button class="btn btn-danger">شروع</button>
+      <div class="flex flex-col w-full justify-center items-center">
+        <h1 class="text-primary text-center pb-4 text-2xl underline">نهج البلاغه V1.0.0</h1>
+        <button class="btn btn-primary mb-2">شروع</button>
+        <button class="btn btn-secondary">قرائت اغازین</button>
+        <button class="btn btn-danger">شروع</button>
+      </div>
     </q-page-container>
     <div class="bg-bg text-text p-4 rounded shadow">
       <h2 class="text-primary">عنوان</h2>

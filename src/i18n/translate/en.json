@@ -9,5 +9,8 @@
   "currentTheme": "Current Theme",
   "loggedInAs": "Logged in as",
   "notLoggedIn": "You are not logged in",
+  "language": "english",
+  "notSelctedLanguage": "فارسی",
+
   "nav": { "wisdom": "wisdoms", "home": "home", "letters": "letters", "sermons": "sermons", "settings": "settings" }
 }

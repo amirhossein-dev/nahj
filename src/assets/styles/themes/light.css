@@ -1,0 +1,12 @@
+:root {
+    --color-bg: rgba(249, 250, 251, 0.85);
+    --color-surface: rgba(255, 255, 255, 0.3);
+    --color-primary: rgba(13, 148, 136, 0.9);
+    /* فیروزه‌ای مذهبی */
+    --color-accent: rgba(180, 83, 9, 0.8);
+    /* طلایی گرم */
+    --color-text: rgba(17, 24, 39, 0.9);
+    /* خاکستری تیره */
+    --color-danger: rgba(192, 18, 18, 0.747);
+
+}

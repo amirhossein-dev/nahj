@@ -6,22 +6,20 @@
       </h1>
     </div>
     <div class="flex items-center space-x-4">
-      <div v-if="auth.isAuthenticated" class="flex items-center space-x-2">
+      <!-- <div v-if="auth.isAuthenticated" class="flex items-center space-x-2">
         <span>{{ auth.userName }}</span>
         <button @click="auth.logout" class="text-red-500 hover:underline">{{ $t('logout') }}</button>
       </div>
       <div v-else>
         <button @click="loginDemo" class="text-blue-600 hover:underline">{{ $t('login') }}</button>
-      </div>
+      </div> -->
 
       <select v-model="settings.language" @change="changeLanguage" class="border rounded px-2 py-1">
-        <option value="fa">فارسی</option>
-        <option value="en">English</option>
+        <option value="fa" class="">{{ $t('language') }}</option>
+        <option value="en" class="">{{ $t('notSelctedLanguage') }}</option>
       </select>
 
-      <button @click="settings.toggleTheme" class="px-3 py-1 border rounded">
-        {{ settings.theme === 'light' ? $t('darkMode') : $t('lightMode') }}
-      </button>
+      <ThemeToggler />
     </div>
   </header>
 </template>
@@ -30,6 +28,7 @@
 import { useSettingsStore, useAuthStore } from '@/stores/appConfig'
 import { watch } from 'vue'
 import { useI18n } from 'vue-i18n'
+import ThemeToggler from '../buttons/themeToggler/themeToggler.vue'
 
 const settings = useSettingsStore()
 const auth = useAuthStore()
@@ -44,9 +43,9 @@ watch(
 )
 
 // نمونه لاگین دمو
-function loginDemo() {
-  auth.login('امیرحسین')
-}
+// function loginDemo() {
+//   auth.login('امیرحسین')
+// }
 
 // تغییر زبان از select
 function changeLanguage(event: Event) {

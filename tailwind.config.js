@@ -1,15 +1,22 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
+  darkMode: 'class',
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-  darkMode: 'class', // یا 'media' اگر ترجیح می‌دی بر اساس سیستم
   theme: {
     extend: {
       colors: {
+        surface: 'var(--color-surface)',
         bg: 'var(--color-bg)',
-        text: 'var(--color-text)',
         primary: 'var(--color-primary)',
-        danger: 'var(--color-danger)'
+        danger: 'var(--color-danger)',
+        accent: 'var(--color-accent)',
+        text: 'var(--color-text)',
+
+        'background-light': '#fefefe',
+        'background-dark': '#121212',
+        'text-light': '#ffffff',
+        'text-dark': '#1a1a1a'
       }
     }
   },

@@ -1,0 +1,20 @@
+@layer components {
+    .btn {
+        @apply font-bold px-4 py-2 rounded;
+    }
+
+    .btn-primary {
+        background-color: var(--color-primary);
+        color: var(--color-on-primary);
+    }
+
+    .btn-secondary {
+        background-color: var(--color-accent);
+        color: var(--color-on-primary);
+    }
+
+    .btn-danger {
+        background-color: var(--color-danger);
+        color: var(--color-on-danger);
+    }
+}

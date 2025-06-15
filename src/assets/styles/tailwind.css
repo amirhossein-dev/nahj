@@ -1,24 +1,17 @@
+/* src/assets/styles/tailwind.css */
+
+/* ---- Global Imports (must come first) ---- */
+@import './base.css';
+@import './components/buttons.css';
+@import './themes/light.css';
+@import './themes/dark.css';
+
+/* ---- Tailwind Directives ---- */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    :root {
-        --color-bg: #ffffff;
-        --color-text: #1f2937;
-        --color-primary: #3b82f6;
-        --color-danger: #ef4444;
-    }
-
-    .dark {
-        --color-bg: #1f2937;
-        --color-text: #f9fafb;
-        --color-primary: #60a5fa;
-        --color-danger: #f87171;
-    }
-
-    body {
-        background-color: var(--color-bg);
-        color: var(--color-text);
-    }
+/* custom utilities */
+.theme-surface {
+    @apply bg-background-light text-text-dark dark:bg-background-dark dark:text-text-light;
 }

@@ -1,0 +1,10 @@
+:root {
+    --color-bg: rgba(17, 24, 39, 0.85);
+    --color-surface: rgba(31, 41, 55, 0.4);
+    --color-primary: rgba(34, 197, 94, 0.9);
+    /* سبز یشمی عرفانی */
+    --color-accent: rgba(253, 224, 71, 0.75);
+    /* طلایی روشن */
+    --color-text: rgba(255, 255, 255, 0.9);
+    --color-danger: rgba(192, 18, 18, 0.747);
+}

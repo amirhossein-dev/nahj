@@ -8,6 +8,8 @@
   "currentLanguage": "زبان فعلی",
   "currentTheme": "تم فعلی",
   "loggedInAs": "وارد شده به عنوان",
+  "language": "فارسی",
+  "notSelctedLanguage": "english",
   "notLoggedIn": "شما وارد نشده‌اید",
   "nav": { "wisdom": "حکمت ها", "home": "خانه", "letters": "نامه ها", "sermons": "خطبه ها", "settings": "تنطیمات" }
 }

@@ -34,7 +34,6 @@ const settings = useSettingsStore()
 const auth = useAuthStore()
 const { locale } = useI18n()
 
-// هماهنگی تغییر زبان در store و i18n
 watch(
   () => settings.language,
   (newLang) => {

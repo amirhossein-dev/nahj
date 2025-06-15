@@ -15,3 +15,11 @@
 .theme-surface {
     @apply bg-background-light text-text-dark dark:bg-background-dark dark:text-text-light;
 }
+
+.q-btn-item>span {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100%;
+}

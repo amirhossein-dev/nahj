@@ -1,25 +1,27 @@
 <template>
-  <div>
-    <HeaderBar />
-    <div class="theme-surface p-4">
+  <q-layout view="lHh Lpr lFf">
+    <q-header elevated>
+      <HeaderBar />
+    </q-header>
+    <q-page-container class="theme-surface p-4 min-h-screen">
       <h1 class="text-primary text-2xl underline">سلام دنیا</h1>
       <button class="btn btn-secondary">شروع</button>
       <button class="btn btn-primary">شروع</button>
       <button class="btn btn-danger">شروع</button>
-    </div>
+    </q-page-container>
     <div class="bg-bg text-text p-4 rounded shadow">
       <h2 class="text-primary">عنوان</h2>
       <p class="text-accent">متن نمونه</p>
     </div>
 
-    <!-- <BottomNav /> -->
+    <BottomNav />
     <router-view />
-  </div>
+  </q-layout>
 </template>
 
 <script setup lang="ts">
 import HeaderBar from '@/components/headerBar/headerBar.vue'
-// import BottomNav from '@/components/bottomNav/bottomNav.vue'
+import BottomNav from '@/components/bottomNav/bottomNav.vue'
 import { useThemeStore } from '@/stores/themeStore'
 import { watch } from 'vue'
 

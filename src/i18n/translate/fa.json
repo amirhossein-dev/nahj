@@ -11,5 +11,7 @@
   "language": "فارسی",
   "notSelctedLanguage": "english",
   "notLoggedIn": "شما وارد نشده‌اید",
+  "start": "شروع",
+
   "nav": { "wisdom": "حکمت ها", "home": "خانه", "letters": "نامه ها", "sermons": "خطبه ها", "settings": "تنطیمات" }
 }

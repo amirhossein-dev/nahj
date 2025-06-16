@@ -6,9 +6,9 @@
     <q-page-container class="theme-surface p-4 min-h-screen">
       <div class="flex flex-col w-full justify-center items-center">
         <h1 class="text-primary text-center pb-4 text-2xl underline">نهج البلاغه V1.0.0</h1>
-        <button class="btn btn-primary mb-2">شروع</button>
+        <button class="btn btn-primary mb-2">{{ $t('start') }}</button>
         <button class="btn btn-secondary">قرائت اغازین</button>
-        <button class="btn btn-danger">شروع</button>
+        <button class="btn btn-danger">{{ $t('start') }}</button>
       </div>
     </q-page-container>
     <div class="bg-bg text-text p-4 rounded shadow">

@@ -1,5 +1,5 @@
 {
-  "appTitle": "نهج البلاغه",
+  "appTitle": "Nahj`albalaghe",
   "login": "Login",
   "logout": "Logout",
   "darkMode": "Dark Mode",
@@ -11,6 +11,6 @@
   "notLoggedIn": "You are not logged in",
   "language": "english",
   "notSelctedLanguage": "فارسی",
-
+  "start": "start",
   "nav": { "wisdom": "wisdoms", "home": "home", "letters": "letters", "sermons": "sermons", "settings": "settings" }
 }

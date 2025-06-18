@@ -16,7 +16,7 @@
 
       <select v-model="settings.language" @change="changeLanguage" class="text-[--color-text-light] dark:[color-text] border rounded px-2 py-1">
         <option value="fa" class="text-[--color-text-light] dark:[color-]">{{ $t('language') }}</option>
-        <option value="en" class="text-[--color-text-light] dark:[color-]">{{ $t('notSelctedLanguage') }}</option>
+        <option value="en" class="text-[--color-text-light] dark:[color-]">{{ $t('notSelectedLanguage') }}</option>
       </select>
 
       <ThemeToggler />

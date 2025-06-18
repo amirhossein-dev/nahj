@@ -5,7 +5,8 @@ import { createPinia } from 'pinia'
 import i18n from './i18n'
 import '@/assets/styles/tailwind.css'
 import { useThemeStore } from '@/stores/themeStore'
-import { Quasar, QBtn } from 'quasar'
+import { Quasar } from 'quasar'
+import 'quasar/dist/quasar.css'
 
 const app = createApp(App)
 const pinia = createPinia()
@@ -17,8 +18,5 @@ themeStore.initTheme()
 
 app.use(router)
 app.use(i18n)
-app.use(Quasar, {
-  components: { QBtn },
-  config: {}
-})
+app.use(Quasar)
 app.mount('#app')

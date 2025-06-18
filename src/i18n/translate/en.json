@@ -10,7 +10,7 @@
   "loggedInAs": "Logged in as",
   "notLoggedIn": "You are not logged in",
   "language": "english",
-  "notSelctedLanguage": "فارسی",
+  "notSelectedLanguage": "فارسی",
   "start": "start",
   "nav": { "wisdom": "wisdoms", "home": "home", "letters": "letters", "sermons": "sermons", "settings": "settings" }
 }

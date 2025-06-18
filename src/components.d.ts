@@ -10,6 +10,9 @@ declare module 'vue' {
   export interface GlobalComponents {
     BottomNav: typeof import('./components/bottomNav/bottomNav.vue')['default']
     HeaderBar: typeof import('./components/headerBar/headerBar.vue')['default']
+    IntroText: typeof import('./components/prayerRecitation/introText.vue')['default']
+    PrayerIntroWrapper: typeof import('./components/prayerRecitation/prayerIntroWrapper.vue')['default']
+    PrayerRecitation: typeof import('./components/prayerRecitation/prayerRecitation.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     ThemeToggler: typeof import('./components/buttons/themeToggler/themeToggler.vue')['default']

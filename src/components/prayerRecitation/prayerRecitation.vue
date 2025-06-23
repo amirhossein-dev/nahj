@@ -66,7 +66,7 @@ const player = ref(null)
 
 <style scoped>
 .highlight {
-  background-color: var(--color-accent);
-  color: var(--color-bg);
+  color: var(--color-primary);
+  text-decoration: wavy;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <q-footer
     v-if="uiStore.showFooter"
-    class="bg-white bg-opacity-80 dark:bg-gray-900 dark:bg-opacity-80 border-t border-gray-300 dark:border-gray-700 backdrop-blur-md text-white flex items-center w-full fixed bottom-0 left-0 right-0 z-50 py-2 px-0"
+    class="light-utility bg-opacity-80 dark:bg-gray-900 dark:bg-opacity-80 border-t border-gray-300 dark:border-gray-700 backdrop-blur-md text-white flex items-center w-full fixed bottom-0 left-0 right-0 z-50 py-2 px-0"
     elevated
   >
     <div class="flex flex-row justify-evenly items-center w-full q-pa-sm">
@@ -59,3 +59,10 @@ function navigate(item: (typeof navItems)[number]) {
   }
 }
 </script>
+
+<style scoped>
+.light-utility {
+  background-color: var(--color-surface);
+  color: var(--color-text-light) !important;
+}
+</style>

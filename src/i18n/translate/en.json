@@ -12,5 +12,6 @@
   "language": "english",
   "notSelectedLanguage": "فارسی",
   "start": "start",
+  "startPrayer": "Start prayer",
   "nav": { "wisdom": "wisdoms", "home": "home", "letters": "letters", "sermons": "sermons", "settings": "settings" }
 }

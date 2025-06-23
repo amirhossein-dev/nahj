@@ -12,6 +12,6 @@
   "notSelectedLanguage": "english",
   "notLoggedIn": "شما وارد نشده‌اید",
   "start": "شروع",
-
+  "startPrayer": "دعای آغازین",
   "nav": { "wisdom": "حکمت ها", "home": "خانه", "letters": "نامه ها", "sermons": "خطبه ها", "settings": "تنطیمات" }
 }

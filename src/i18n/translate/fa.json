@@ -13,5 +13,6 @@
   "notLoggedIn": "شما وارد نشده‌اید",
   "start": "شروع",
   "startPrayer": "دعای آغازین",
+  "return": "بازگشت",
   "nav": { "wisdom": "حکمت ها", "home": "خانه", "letters": "نامه ها", "sermons": "خطبه ها", "settings": "تنطیمات" }
 }

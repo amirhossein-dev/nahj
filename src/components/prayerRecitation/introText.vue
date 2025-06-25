@@ -8,15 +8,24 @@
         {{ line }}
       </p>
     </div>
-    <q-btn color="purple" @click="$emit('startPrayer')">{{ $t('startPrayer') }}</q-btn>
+    <q-btn
+      color="purple"
+      @click="
+        () => {
+          $emit('startPrayer'), (uiStore.showFooter = false)
+        }
+      "
+      >{{ $t('startPrayer') }}</q-btn
+    >
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
 import { useSettingsStore } from '@/stores/appConfig'
+import { useUIStore } from '@/stores/uiStore'
 import { storeToRefs } from 'pinia'
 
+const uiStore = useUIStore()
 const settingStore = useSettingsStore()
 const { language } = storeToRefs(settingStore)
 const lines = [
@@ -33,7 +42,6 @@ Al-Bara' ibn 'Azib says:`,
   ,
   `Bara said, "I swear by God that I will not recite this for worldly needs." The Imam said, "You have said it well. The Prophet (peace and blessings of Allah be upon him and his family) also advised me to do the same. Of course, he ordered me to recite this in difficult matters. The first six verses of Surah Hadid and the last three verses of Surah Hashr."`
 ]
-const startingPrayerToggle = ref(false)
 </script>
 
 <style scoped>

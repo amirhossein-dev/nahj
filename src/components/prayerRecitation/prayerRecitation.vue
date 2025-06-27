@@ -36,7 +36,7 @@
 </template>
 
 <script setup>
-import { ref, watchEffect, nextTick, defineEmits } from 'vue'
+import { ref, onMounted, nextTick, defineEmits, watch } from 'vue'
 import { useAudioPlayer } from '@/composables/useAudioPlayer'
 import { useUIStore } from '@/stores/uiStore'
 import { IconPlayerPlay, IconPlayerPause, IconArrowLeft } from '@tabler/icons-vue'
@@ -89,34 +89,39 @@ function handleEnded() {
   isPlaying.value = false
   emit('prayerFinished')
 }
-
-watchEffect(() => {
-  if (!audioRef.value) return
-
-  const time = audioRef.value.currentTime || 0
-  const verse = verses.find((v) => time >= v.start && time < v.end)
-  const newIndex = verse ? verse.index : null
-
-  if (newIndex !== currentVerseIndex.value) {
-    currentVerseIndex.value = newIndex
-
-    nextTick(() => {
-      const el = document.querySelector(`[data-verse="${newIndex}"]`)
-      if (el) {
-        // Remove pulse if already exists to allow restart
-        el.classList.remove('pulse')
-        void el.offsetWidth // trigger reflow
-        el.classList.add('pulse')
-
-        el.scrollIntoView({ behavior: 'smooth', block: 'center' })
-
-        setTimeout(() => {
-          el.classList.remove('pulse')
-        }, 1500)
-      }
-    })
-  }
+onMounted(() => {
+  setInterval(() => {
+    if (audioRef.value) {
+      currentTime.value = audioRef.value.currentTime
+    }
+  }, 300) // یا 200ms برای دقت بیشتر
 })
+watch(
+  currentTime,
+  (time) => {
+    const verse = verses.find((v) => time >= v.start && time < v.end)
+    const newIndex = verse ? verse.index : null
+    if (newIndex !== currentVerseIndex.value) {
+      currentVerseIndex.value = newIndex
+
+      nextTick(() => {
+        const el = document.querySelector(`[data-verse="${newIndex}"]`)
+        if (el) {
+          el.classList.remove('pulse')
+          void el.offsetWidth
+          el.classList.add('pulse')
+
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+
+          setTimeout(() => {
+            el.classList.remove('pulse')
+          }, 1500)
+        }
+      })
+    }
+  },
+  { immediate: true }
+)
 </script>
 
 <style scoped>

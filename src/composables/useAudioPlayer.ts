@@ -1,4 +1,4 @@
-import { ref, watch, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 export function useAudioPlayer(src: string, verses: any[]) {
   const audioRef = ref<HTMLAudioElement | null>(null)

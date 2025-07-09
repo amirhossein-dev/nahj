@@ -1,4 +1,3 @@
-// src/store/index.ts
 import { defineStore } from 'pinia'
 
 // Settings Store

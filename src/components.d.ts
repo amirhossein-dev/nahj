@@ -10,6 +10,11 @@ declare module 'vue' {
   export interface GlobalComponents {
     BottomNav: typeof import('./components/bottomNav/bottomNav.vue')['default']
     HeaderBar: typeof import('./components/headerBar/headerBar.vue')['default']
+    HekmatAudioPlayer: typeof import('./components/hekmat/hekmatAudioPlayer.vue')['default']
+    HekmatContent: typeof import('./components/hekmat/hekmatContent.vue')['default']
+    HekmatFooterBar: typeof import('./components/hekmat/hekmatFooterBar.vue')['default']
+    HekmatHeader: typeof import('./components/hekmat/hekmatHeader.vue')['default']
+    HekmatNavigator: typeof import('./components/hekmat/hekmatNavigator.vue')['default']
     IntroText: typeof import('./components/prayerRecitation/introText.vue')['default']
     PrayerIntroWrapper: typeof import('./components/prayerRecitation/prayerIntroWrapper.vue')['default']
     PrayerRecitation: typeof import('./components/prayerRecitation/prayerRecitation.vue')['default']

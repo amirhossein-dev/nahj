@@ -5,21 +5,13 @@
         {{ $t('appTitle') }}
       </h1>
     </div>
-    <div class="flex items-center space-x-4">
-      <!-- <div v-if="auth.isAuthenticated" class="flex items-center space-x-2">
-        <span>{{ auth.userName }}</span>
-        <button @click="auth.logout" class="text-red-500 hover:underline">{{ $t('logout') }}</button>
-      </div>
-      <div v-else>
-        <button @click="loginDemo" class="text-blue-600 hover:underline">{{ $t('login') }}</button>
-      </div> -->
-
+    <div class="flex space-x-4 gap-4">
       <select v-model="settings.language" @change="changeLanguage" class="text-[--color-text-light] dark:[color-text] border rounded px-2 py-1">
         <option value="fa" class="text-[--color-text-light] dark:[color-]">{{ $t('language') }}</option>
         <option value="en" class="text-[--color-text-light] dark:[color-]">{{ $t('notSelectedLanguage') }}</option>
       </select>
 
-      <ThemeToggler />
+      <ThemeToggler class="margin-helper" />
     </div>
   </header>
 </template>
@@ -52,3 +44,8 @@ function changeLanguage(event: Event) {
   settings.setLanguage(target.value)
 }
 </script>
+<style>
+.margin-helper {
+  margin: 0 !important;
+}
+</style>

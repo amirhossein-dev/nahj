@@ -24,7 +24,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch, computed } from 'vue'
+import { ref, watch } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { useUIStore } from '@/stores/uiStore'
 import { IconHome, IconMail, IconBook, IconMessages, IconSettings } from '@tabler/icons-vue'
@@ -36,7 +36,7 @@ const currentTab = ref<string | null>(null)
 const navItems = [
   { name: 'home', label: 'nav.home', route: '/', icon: IconHome },
   { name: 'letters', label: 'nav.letters', route: '/letters', icon: IconMail },
-  { name: 'wisdom', label: 'nav.wisdom', route: '/wisdom', icon: IconBook },
+  { name: 'wisdom', label: 'nav.wisdoms', route: { name: 'HekmatDetail', params: { id: 31 } }, icon: IconBook },
   { name: 'sermons', label: 'nav.sermons', route: '/sermons', icon: IconMessages },
   { name: 'settings', label: 'nav.settings', route: '/settings', icon: IconSettings }
 ]

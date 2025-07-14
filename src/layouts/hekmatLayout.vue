@@ -1,5 +1,5 @@
 <template>
-  <div class="theme-surface hekmat-layout">
+  <q-layout class="theme-surface hekmat-layout">
     <!-- هدر خاص حکمت -->
     <transition name="fade-slide-down">
       <hekmatHeader v-if="showHeader" />
@@ -17,12 +17,12 @@
 
     <!-- فوتر اصلی کل اپ (نسبت به layout عمومی اپلیکیشن) -->
     <slot name="app-footer" />
-  </div>
+  </q-layout>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import hekmatHeader from '@/components/hekmat/hekmatHeader.vue'
+import hekmatHeader from '@/components/hekmat/hekmatHeader/hekmatHeader.vue'
 import hekmatFooterBar from '@/components/hekmat/hekmatFooterBar.vue'
 
 const mainContent = ref(null)

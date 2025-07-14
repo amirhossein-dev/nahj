@@ -11,7 +11,7 @@
         flat
         dense
         unelevated
-        class="flex flex-col items-center justify-center w-full text-gray-800 dark:text-gray-200"
+        class="flex flex-col items-center justify-center w-full text-[--color-text]"
         :active="currentTab === item.name"
         @click="navigate(item)"
         :aria-label="$t(item.label)"
@@ -61,8 +61,8 @@ function navigate(item: (typeof navItems)[number]) {
 </script>
 
 <style scoped>
-.light-utility {
+/* .light-utility {
   background-color: var(--color-surface);
   color: var(--color-text-light) !important;
-}
+} */
 </style>

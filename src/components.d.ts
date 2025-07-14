@@ -8,13 +8,19 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    BaseModal: typeof import('./components/base/baseModal.vue')['default']
     BottomNav: typeof import('./components/bottomNav/bottomNav.vue')['default']
     HeaderBar: typeof import('./components/headerBar/headerBar.vue')['default']
     HekmatAudioPlayer: typeof import('./components/hekmat/hekmatAudioPlayer.vue')['default']
+    HekmatAudioSettingsModal: typeof import('./components/hekmat/hekmatHeader/HekmatAudioSettingsModal.vue')['default']
     HekmatContent: typeof import('./components/hekmat/hekmatContent.vue')['default']
+    HekmatDisplaySettingsModal: typeof import('./components/hekmat/hekmatHeader/HekmatDisplaySettingsModal.vue')['default']
     HekmatFooterBar: typeof import('./components/hekmat/hekmatFooterBar.vue')['default']
-    HekmatHeader: typeof import('./components/hekmat/hekmatHeader.vue')['default']
+    HekmatHeader: typeof import('./components/hekmat/hekmatHeader/hekmatHeader.vue')['default']
+    HekmatHeaderControls: typeof import('./components/hekmat/hekmatHeader/HekmatHeaderControls.vue')['default']
     HekmatNavigator: typeof import('./components/hekmat/hekmatNavigator.vue')['default']
+    HekmatSearchModal: typeof import('./components/hekmat/search/HekmatSearchModal.vue')['default']
+    HekmatVersionSelectorModal: typeof import('./components/hekmat/hekmatHeader/HekmatVersionSelectorModal.vue')['default']
     IntroText: typeof import('./components/prayerRecitation/introText.vue')['default']
     PrayerIntroWrapper: typeof import('./components/prayerRecitation/prayerIntroWrapper.vue')['default']
     PrayerRecitation: typeof import('./components/prayerRecitation/prayerRecitation.vue')['default']

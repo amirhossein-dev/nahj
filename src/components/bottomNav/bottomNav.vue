@@ -11,7 +11,7 @@
         flat
         dense
         unelevated
-        class="flex flex-col items-center justify-center w-full text-gray-800 dark:text-gray-200"
+        class="flex flex-col items-center justify-center w-full text-[--color-text]"
         :active="currentTab === item.name"
         @click="navigate(item)"
         :aria-label="$t(item.label)"
@@ -24,7 +24,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch, computed } from 'vue'
+import { ref, watch } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { useUIStore } from '@/stores/uiStore'
 import { IconHome, IconMail, IconBook, IconMessages, IconSettings } from '@tabler/icons-vue'
@@ -36,7 +36,7 @@ const currentTab = ref<string | null>(null)
 const navItems = [
   { name: 'home', label: 'nav.home', route: '/', icon: IconHome },
   { name: 'letters', label: 'nav.letters', route: '/letters', icon: IconMail },
-  { name: 'wisdom', label: 'nav.wisdom', route: '/wisdom', icon: IconBook },
+  { name: 'wisdom', label: 'nav.wisdoms', route: { name: 'HekmatDetail', params: { id: 31 } }, icon: IconBook },
   { name: 'sermons', label: 'nav.sermons', route: '/sermons', icon: IconMessages },
   { name: 'settings', label: 'nav.settings', route: '/settings', icon: IconSettings }
 ]
@@ -61,8 +61,8 @@ function navigate(item: (typeof navItems)[number]) {
 </script>
 
 <style scoped>
-.light-utility {
+/* .light-utility {
   background-color: var(--color-surface);
   color: var(--color-text-light) !important;
-}
+} */
 </style>

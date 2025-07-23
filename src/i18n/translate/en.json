@@ -14,5 +14,7 @@
   "start": "start",
   "startPrayer": "Start prayer",
   "return": "return",
-  "nav": { "wisdom": "wisdoms", "home": "home", "letters": "letters", "sermons": "sermons", "settings": "settings" }
+  "nav": { "wisdoms": "wisdoms", "home": "home", "letters": "letters", "sermons": "sermons", "settings": "settings" },
+  "wisdom": "wisdom",
+  "font": "فونت"
 }

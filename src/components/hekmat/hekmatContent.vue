@@ -9,7 +9,7 @@
         <q-btn label="ترکیبی" :outline="userPreferences.mode !== 'combined'" @click="userPreferences.setMode('combined')" />
       </q-btn-group>
     </div>
-    <div class="hekmat-body" :style="{ fontFamily: uiStore.currentFont }">
+    <div class="hekmat-body theme-surface" :style="{ fontFamily: uiStore.currentFont }">
       <div v-for="(block, index) in hekmat.blocks" :key="index" class="hekmat-block q-mb-md">
         <span class="hekmat-number">{{ block.index }}</span>
 
@@ -39,6 +39,7 @@ const props = defineProps({
     default: null
   }
 })
+const testSrc = '/audio/farsi/F-3.mp3'
 </script>
 <style scoped>
 .text-arabic {

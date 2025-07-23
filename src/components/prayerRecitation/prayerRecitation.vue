@@ -27,7 +27,7 @@
   </div>
   <q-footer class="glass-footer fixed bottom-0 left-0 right-0 z-50" v-if="!uiStore.showFooter">
     <q-slider v-model="currentTime" :max="duration" @change="seekTo" class="px-3 pt-2" color="primary" label-always :label-value="Math.floor(currentTime)" />
-    <audio ref="audioRef" :src="audioSrc" preload="auto" @ended="handleEnded"></audio>
+    <audio ref="audioRef" :src="audioSrc" controlsList="nodownload" preload="auto" @ended="handleEnded"></audio>
     <div class="row q-gutter-sm justify-center">
       <q-btn round color="primary" @click="togglePlay()" v-if="!isPlaying"><IconPlayerPlay /></q-btn>
       <q-btn round color="primary" @click="togglePlay()" v-else><IconPlayerPause /></q-btn>

@@ -28,7 +28,7 @@
           >
             <q-list>
               <q-item clickable @click="openRelatedContent">
-                <q-item-section class="flex items-center whitespace-nowrap">محتوای مرتبط</q-item-section>
+                <q-item-section class="flex items-center whitespace-nowrap" @click="notif">محتوای مرتبط</q-item-section>
               </q-item>
               <q-item clickable @click="openFontSettings">
                 <q-item-section class="flex items-center whitespace-nowrap" @click="showFontDisplaySettingsModal = true">فونت و تنظیمات</q-item-section>
@@ -65,7 +65,19 @@ import hekmatFontSettingsMenuModal from './hekmatFontSettingsMenuModal.vue'
 import HekmatVersionSelectorModal from './HekmatVersionSelectorModal.vue'
 import HekmatSearchModal from '../search/HekmatSearchModal.vue'
 import { IconSearch, IconDotsCircleHorizontal, IconArrowLeft, IconVolume } from '@tabler/icons-vue'
+import { useQuasar, QSpinnerGears } from 'quasar'
 
+const $q = useQuasar()
+
+function notif() {
+  $q.notify({
+    message: 'به زودی',
+    color: 'orange-6',
+    position: 'top',
+    timeout: 1500,
+    spinner: QSpinnerGears
+  })
+}
 defineProps({
   title: {
     type: String,
@@ -74,7 +86,6 @@ defineProps({
 })
 
 const backdropFilter = 'saturate(150%) blur(4px)'
-
 const showFontSettingsMenu = ref(false)
 
 const showFontSettings = ref(false)

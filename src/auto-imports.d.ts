@@ -6,5 +6,5 @@
 // biome-ignore lint: disable
 export {}
 declare global {
-
+  const Notify: typeof import('quasar')['Notify']
 }

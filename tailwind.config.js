@@ -20,6 +20,14 @@ module.exports = {
         'background-dark': '#121212',
         'text-light': '#ffffff',
         'text-dark': '#1a1a1a'
+      },
+      fontFamily: {
+        danesh: ['"A Danesh"', 'sans-serif'],
+        titr: ['"B Titr Bold"', 'sans-serif'],
+        roya: ['"Far RoyaBd"', 'sans-serif'],
+        nastaliq: ['"IranNastaliq"', 'serif'],
+        tanha: ['"Tanha"', 'sans-serif'],
+        vazir: ['"Vazir"', 'sans-serif']
       }
     }
   },

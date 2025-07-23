@@ -15,6 +15,7 @@ declare module 'vue' {
     HekmatAudioSettingsModal: typeof import('./components/hekmat/hekmatHeader/HekmatAudioSettingsModal.vue')['default']
     HekmatContent: typeof import('./components/hekmat/hekmatContent.vue')['default']
     HekmatDisplaySettingsModal: typeof import('./components/hekmat/hekmatHeader/HekmatDisplaySettingsModal.vue')['default']
+    HekmatFontSettingsMenuModal: typeof import('./components/hekmat/hekmatHeader/hekmatFontSettingsMenuModal.vue')['default']
     HekmatFooterBar: typeof import('./components/hekmat/hekmatFooterBar.vue')['default']
     HekmatHeader: typeof import('./components/hekmat/hekmatHeader/hekmatHeader.vue')['default']
     HekmatHeaderControls: typeof import('./components/hekmat/hekmatHeader/HekmatHeaderControls.vue')['default']

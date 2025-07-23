@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Vazir';
+    src: url('@/assets/fonts/Vazir.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Tanha';
+    src: url('@/assets/fonts/Tanha.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IranNastaliq';
+    src: url('@/assets/fonts/IranNastaliq.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roya';
+    src: url('@/assets/fonts/Far_RoyaBd.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TitrBold';
+    src: url('@/assets/fonts/B_Titr_Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ADanesh';
+    src: url('@/assets/fonts/A_Danesh.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

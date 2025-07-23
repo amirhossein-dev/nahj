@@ -9,7 +9,7 @@
         <q-btn label="ترکیبی" :outline="userPreferences.mode !== 'combined'" @click="userPreferences.setMode('combined')" />
       </q-btn-group>
     </div>
-    <div class="hekmat-body">
+    <div class="hekmat-body" :style="{ fontFamily: uiStore.currentFont }">
       <div v-for="(block, index) in hekmat.blocks" :key="index" class="hekmat-block q-mb-md">
         <span class="hekmat-number">{{ block.index }}</span>
 
@@ -30,6 +30,8 @@
 
 <script setup>
 import { useUserPreferences } from '@/stores/audioSettingsStore'
+import { useUIStore } from '@/stores/uiStore'
+const uiStore = useUIStore()
 const userPreferences = useUserPreferences()
 const props = defineProps({
   hekmat: {

@@ -15,5 +15,6 @@
   "startPrayer": "دعای آغازین",
   "return": "بازگشت",
   "nav": { "wisdoms": "حکمت ها", "home": "خانه", "letters": "نامه ها", "sermons": "خطبه ها", "settings": "تنطیمات" },
-  "wisdom": "حکمت ها"
+  "wisdom": "حکمت ها",
+  "font": "فونت"
 }

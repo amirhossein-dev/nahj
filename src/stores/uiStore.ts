@@ -3,10 +3,15 @@ import { ref } from 'vue'
 
 export const useUIStore = defineStore('uiStore', () => {
   const showFooter = ref(true)
+  const currentFont = ref('Vazir')
 
   function setShowFooter(value: boolean) {
     showFooter.value = value
   }
 
-  return { showFooter, setShowFooter }
+  function setFont(fontName: string) {
+    currentFont.value = fontName
+  }
+
+  return { showFooter, currentFont, setShowFooter, setFont }
 })

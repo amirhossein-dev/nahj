@@ -35,7 +35,6 @@
     <!-- تنظیمات سرعت و تایمر -->
     <div class="flex justify-between items-center px-4 mt-2 text-sm pt-3">
       <!-- سرعت پخش -->
-      <!-- <div class="cursor-pointer">{{  }}x</div> -->
       <q-btn flat no-caps class="text-[--color-text]">
         <p class="text-bold text-lg">{{ playbackSpeed }}X</p>
         <q-menu auto-close anchor="top left">
@@ -47,9 +46,6 @@
         </q-menu>
       </q-btn>
       <!-- تایمر -->
-      <!-- <div @click="showTimerMenu = true" class="cursor-pointer text-bold text-lg">
-      
-      </div> -->
 
       <q-btn flat no-caps class="text-[--color-text]">
         <p class="text-bold text-lg" dir="rtl" v-if="timerIndicator">{{ timerIndicator }}</p>

@@ -2,9 +2,7 @@
     --color-bg: rgba(17, 24, 39);
     --color-surface: rgba(31, 41, 55);
     --color-primary: rgba(34, 197, 94, 0.9);
-    /* سبز یشمی عرفانی */
     --color-accent: rgba(253, 224, 71, 0.75);
-    /* طلایی روشن */
     --color-text: rgba(255, 255, 255);
     --color-danger: rgba(192, 18, 18);
 }

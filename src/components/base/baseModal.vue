@@ -1,5 +1,5 @@
 <template>
-  <q-dialog backdrop-filter="saturate(150%) blur(4px)" v-model="internalModel" :persistent="persistent" :maximized="maximized" transition-show="slide-up" transition-hide="slide-down">
+  <q-dialog :backdrop-filter="backdropFilter" v-model="internalModel" :persistent="persistent" :maximized="maximized" transition-show="slide-up" transition-hide="slide-down">
     <q-card dark class="bg-[--color-surface] text-[--color-text] rounded-0" :style="computedStyle">
       <slot />
     </q-card>
@@ -12,6 +12,10 @@ import { ref, watch, computed } from 'vue'
 const props = defineProps({
   modelValue: Boolean,
   persistent: Boolean,
+  backdropFilter: {
+    type: String,
+    default: null
+  },
   size: {
     type: String,
     default: 'medium' // small | medium | large | full

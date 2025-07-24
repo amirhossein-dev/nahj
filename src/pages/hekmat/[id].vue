@@ -12,7 +12,6 @@ import hekmatContent from '@/components/hekmat/hekmatContent.vue'
 import { hekmatList } from '@/data/hekmatData'
 
 const route = useRoute()
-const hekmatId = route.params.id
 const hekmat = ref(null)
 
 onMounted(() => {

@@ -11,16 +11,18 @@
         </q-btn>
       </div>
       <div class="player-button bg-stone-500 dark:bg-stone-800">
-        <q-btn flat round @click="togglePlay"><IconPlayerPlayFilled /></q-btn>
+        <q-btn flat round @click="togglePlay"><IconPlayerPauseFilled v-if="audioPlayerStore.isPlaying" /> <IconPlayerPlayFilled size="30" v-else /> </q-btn>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { IconPlayerPlayFilled, IconChevronLeft, IconChevronRight } from '@tabler/icons-vue'
+import { IconPlayerPlayFilled, IconChevronLeft, IconChevronRight, IconPlayerPauseFilled } from '@tabler/icons-vue'
 import { ref } from 'vue'
 import { useQuasar } from 'quasar'
+import { useAudioPlayerStore } from '@/stores/audioPlayerStore'
+const audioPlayerStore = useAudioPlayerStore()
 defineProps<{
   isScrolled: boolean
 }>()
@@ -28,7 +30,7 @@ const $q = useQuasar()
 const mainContent = ref()
 
 const togglePlay = () => {
-  $q.notify({ message: 'پخش / توقف صدا', color: 'primary' })
+  audioPlayerStore.toggle()
 }
 
 const prevHekmat = () => {

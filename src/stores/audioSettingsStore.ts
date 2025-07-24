@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 
 export const useUserPreferences = defineStore('userPreferences', {
   state: () => ({
-    mode: 'farsi' // 'farsi' | 'arabic' | 'combined'
+    mode: 'combined' // 'farsi' | 'arabic' | 'combined'
   }),
   actions: {
     setMode(newMode: string) {

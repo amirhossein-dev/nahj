@@ -1,5 +1,5 @@
 <template>
-  <div :dir="direction" class="mt-4">
+  <div :dir="direction" class="mt-4 flex justify-center items-center">
     <q-btn color="primary" v-if="!startingPrayerToggle" @click="startingPrayerToggle = true">{{ $t('startPrayer') }}</q-btn>
     <div v-else>
       <IntroText v-if="!started" @startPrayer="started = true" />

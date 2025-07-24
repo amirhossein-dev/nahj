@@ -1,14 +1,14 @@
 <template>
   <header class="flex items-center justify-between p-4 bg-gray-100 dark:bg-gray-800">
     <div>
-      <h1 class="text-lg font-bold text-[--color-text-light] dark:text-[--color-primary]">
+      <h1 class="text-lg font-bold text-text-dark dark:text-text-light">
         {{ $t('appTitle') }}
       </h1>
     </div>
     <div class="flex space-x-4 gap-4">
-      <select v-model="settings.language" @change="changeLanguage" class="text-[--color-text-light] dark:[color-text] border rounded px-2 py-1">
-        <option value="fa" class="text-[--color-text-light] dark:[color-]">{{ $t('language') }}</option>
-        <option value="en" class="text-[--color-text-light] dark:[color-]">{{ $t('notSelectedLanguage') }}</option>
+      <select v-model="settings.language" @change="changeLanguage" class="text-text-dark rounded">
+        <option value="fa" class="text-[--color-text-light] dark:text-text-light">{{ $t('language') }}</option>
+        <option value="en" class="text-[--color-text-light] dark:text-text-light">{{ $t('notSelectedLanguage') }}</option>
       </select>
 
       <ThemeToggler class="margin-helper" />

@@ -15,6 +15,32 @@
     @apply bg-background-light text-text-dark dark:bg-background-dark dark:text-text-light;
 }
 
+@layer utilities {
+    .neon-glow {
+        text-shadow:
+            0 0 3px #00f7ff,
+            0 0 7px #00e6ff,
+            0 0 12px #00ccff;
+
+    }
+
+    .dark .neon-glow-dark {
+        text-shadow:
+            0 0 3px #fff,
+            0 0 7px #ffd900,
+            0 0 10px #ffa500;
+    }
+
+    .hekmat-header-color {
+        color: black !important;
+    }
+
+    .dark .hekmat-header-color {
+        color: white !important
+    }
+}
+
+
 .q-btn-item>span {
     display: flex !important;
     flex-direction: column !important;

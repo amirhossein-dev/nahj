@@ -1,7 +1,6 @@
 <template>
   <hekmatLayout>
     <hekmatContent :hekmat="hekmat" />
-    <hekmatAudioPlayer :hekmatId="hekmatId" />
   </hekmatLayout>
 </template>
 
@@ -10,11 +9,9 @@ import { onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import hekmatLayout from '@/layouts/hekmatLayout.vue'
 import hekmatContent from '@/components/hekmat/hekmatContent.vue'
-import hekmatAudioPlayer from '@/components/hekmat/hekmatAudioPlayer.vue'
 import { hekmatList } from '@/data/hekmatData'
 
 const route = useRoute()
-const hekmatId = route.params.id
 const hekmat = ref(null)
 
 onMounted(() => {

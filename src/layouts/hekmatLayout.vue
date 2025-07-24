@@ -10,13 +10,19 @@
       <slot />
     </main>
 
-    <!-- نوار ناوبری/پخش + انیمیشن ورود -->
+    <!-- فوتر اصلی کل اپ -->
     <transition name="fade-slide-up">
-      <hekmatFooterBar v-if="showFooterBar" />
+      <template v-if="showAppFooter">
+        <slot name="app-footer">
+          <BottomNav />
+        </slot>
+      </template>
     </transition>
 
-    <!-- فوتر اصلی کل اپ (نسبت به layout عمومی اپلیکیشن) -->
-    <slot name="app-footer" />
+    <!-- نوار ناوبری/پخش + انیمیشن ورود (روی همه چیز) -->
+    <transition name="fade-slide-up">
+      <hekmatFooterBar :is-scrolled="isScrolled" />
+    </transition>
   </q-layout>
 </template>
 
@@ -28,15 +34,20 @@ import hekmatFooterBar from '@/components/hekmat/hekmatFooterBar.vue'
 const mainContent = ref(null)
 const showHeader = ref(true)
 const showFooterBar = ref(true)
+const showAppFooter = ref(true)
 
 let lastScrollTop = 0
+const isScrolled = ref(false)
 
 const handleScroll = () => {
   const scrollTop = mainContent.value.scrollTop
   const isScrollingDown = scrollTop > lastScrollTop
+  showAppFooter.value = !isScrollingDown
 
   showHeader.value = !isScrollingDown
   showFooterBar.value = !isScrollingDown
+  isScrolled.value = isScrollingDown
+  // isScrolled.value = scrollTop > 1 // 👈 حتی با یک اسکرول فعال شود
 
   lastScrollTop = scrollTop
 }
@@ -49,11 +60,10 @@ const handleScroll = () => {
   height: 100vh;
   overflow: hidden;
 }
-
 .content-area {
   flex: 1;
   overflow-y: auto;
-  padding-bottom: 100px; /* برای اینکه فوتر دومی دیده بشه */
+  padding-bottom: 11.25rem; /* فضای کافی برای هم app-footer و هم audio-player */
 }
 
 /* انیمیشن‌ها */

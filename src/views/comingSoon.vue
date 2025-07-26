@@ -1,5 +1,5 @@
 <template>
-  <div class="coming-soon-page">
+  <div class="coming-soon-page theme-surface">
     <h1>🚧 این بخش به زودی پیاده‌سازی می‌شود!</h1>
     <p>در حال حاضر این قسمت آماده نیست. لطفاً بعداً دوباره مراجعه کنید.</p>
     <q-btn push :loading="toggleSpinner" @click="delayedNav" color="primary">
@@ -35,7 +35,6 @@ function delayedNav() {
   font-family: var(--font-family);
   text-align: center;
   padding: 1rem;
-  color: var(--color-primary);
 }
 .coming-soon-page h1 {
   font-size: 2.5rem;

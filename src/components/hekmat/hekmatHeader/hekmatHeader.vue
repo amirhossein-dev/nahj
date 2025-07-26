@@ -1,5 +1,5 @@
 <template>
-  <q-header id="hard" class="bg-transparent hekmat-header-color q-px-md q-py-sm">
+  <q-header id="hard" class="bg-transparent hekmat-header-color q-px-md q-py-sm" style="padding-top: 1rem">
     <div class="row items-center justify-between">
       <!-- Back Button -->
       <q-btn flat round @click="router.back()"><IconArrowLeft /></q-btn>

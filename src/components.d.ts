@@ -10,7 +10,6 @@ declare module 'vue' {
   export interface GlobalComponents {
     BaseModal: typeof import('./components/base/baseModal.vue')['default']
     BottomNav: typeof import('./components/bottomNav/bottomNav.vue')['default']
-    ComingSoon: typeof import('./views/comingSoon.vue')['default']
     HeaderBar: typeof import('./components/headerBar/headerBar.vue')['default']
     HekmatAudioPlayer: typeof import('./components/hekmat/hekmatAudioPlayer.vue')['default']
     HekmatAudioSettingsModal: typeof import('./components/hekmat/hekmatHeader/HekmatAudioSettingsModal.vue')['default']
